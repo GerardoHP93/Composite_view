@@ -4,17 +4,19 @@
 - **Nombre:** Gerardo Isidro Herrera Pacheco
 - **Matrícula:** ISC 68612
 - **Semestre:** 8vo
+- Materia: Temas selectos de Programación
 - **Maestro:** Jose C Aguilar Canepa
 - **Institución:** Universidad Autónoma de Campeche, Facultad de Ingeniería
 
 ## Descripción del Proyecto
-Este proyecto implementa el patrón de diseño Composite View utilizando el framework Flask de Python. El sistema desarrollado es un panel de administración web que demuestra la modularización y reutilización efectiva de componentes de interfaz de usuario.
+Este proyecto implementa el patrón de diseño Composite View utilizando el framework Flask de Python. El sistema desarrollado es un panel de administración web que demuestra la teorio básica del patron empresarial web "Composite View" mostrando modularización y reutilización efectiva de componentes de interfaz de usuario.
 
 ### Características Principales
-- Sistema de autenticación con roles (administrador)
 - Panel de control interactivo
 - Componentes reutilizables (header, navigation, sidebar, footer)
-- Sistema de notificaciones
+- Demostración de inclusiónes condicionales, para ello se coloco simulaciones de:
+- Sistema de autenticación con roles: administrador. Dependiendo si admin o no se muestran algunos componentes(se maneja en el app.py)
+- Sistema de notificaciones (Es SIMULADO, se maneja en los atributos en app.py) para mostrar las notificaciones si existen.
 - Interfaz responsiva y moderna
 - Gestión de múltiples vistas (estadísticas, configuración, reportes)
 
@@ -83,39 +85,15 @@ El sistema implementa rutas protegidas que:
 - Manejan la autorización de acceso
 - Renderizan las plantillas correspondientes con sus componentes
 
-## Diagramas UML
-
-### Diagrama de Clases
-<descripción>
+### Diagrama de Clases UML
 El diagrama de clases muestra la estructura principal del sistema, incluyendo:
 - Clase Flask Principal (App)
 - Controladores de Rutas
-- Modelo de Usuario
 - Componentes de Vista
 - Relaciones entre componentes
 
-Las clases están organizadas siguiendo el patrón MVC con énfasis en la composición de vistas.
-</descripción>
-[Aquí va el diagrama de clases UML]
+- ![Clase UML](https://github.com/user-attachments/assets/78672c93-0a66-4649-b383-8f8246d18406)
 
-### Diagrama de Componentes
-<descripción>
-El diagrama de componentes ilustra la estructura modular del sistema, mostrando:
-- Componentes del Frontend (Templates, CSS)
-- Componentes del Backend (Flask, Rutas)
-- Dependencias entre componentes
-- Interfaces de comunicación
-</descripción>
-[Aquí va el diagrama de componentes UML]
 
-### Diagrama de Secuencia
-<descripción>
-El diagrama de secuencia muestra el flujo de interacción para una solicitud típica:
-1. Cliente realiza petición
-2. Flask procesa la ruta
-3. Verificación de autorización
-4. Composición de vista
-5. Renderizado de componentes
-6. Respuesta al cliente
-</descripción>
-[Aquí va el diagrama de secuencia UML]
+
+
