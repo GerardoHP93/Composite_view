@@ -1,0 +1,8 @@
+<header class="header">
+    
+    <h1>Mi App con Composite View</h1>
+    {% if user.is_logged_in %}
+    <!-- Incluye la información del usuario si ha iniciado sesión -->
+        {% include 'components/user_info.html' %}
+    {% endif %}
+</header>

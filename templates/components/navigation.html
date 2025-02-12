@@ -1,0 +1,11 @@
+<nav class="navigation">
+    
+    <ul>
+         <!-- Enlace a la página de inicio -->
+        <li><a href="{{ url_for('home') }}">Inicio</a></li>
+        <!-- Enlace al dashboard solo para administradores -->
+        {% if user.role == 'admin' %}
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+        {% endif %}
+    </ul>
+</nav>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}  <!-- Extiende la plantilla base -->
+
+{% block title %}Dashboard{% endblock %}  <!-- Título de la página -->
+
+{% block content %}
+    <h2>Panel de Control</h2>
+    {% if show_widgets %}
+        {% include 'components/dashboard_widgets.html' %}  <!-- Incluye los widgets si están activados -->
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,8 @@
+<div class="user-info">
+    <!-- Muestra el nombre de usuario -->
+    <span>Bienvenido, {{ user.username }}</span>
+    <!-- Muestra las notificaciones si hay alguna -->
+    {% if show_notifications %}
+        <span class="notification-badge">{{ user.notifications }}</span>
+    {% endif %}
+</div>

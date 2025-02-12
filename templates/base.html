@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Mi Sitio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'components/header.html' %}  <!-- Incluye el componente del encabezado -->
+    {% include 'components/navigation.html' %}  <!-- Incluye el componente de navegación -->
+    
+    <div class="main-container">
+        {% if show_sidebar %}
+            {% include 'components/sidebar.html' %}  <!-- Incluye la barra lateral si está activada -->
+        {% endif %}
+        
+        <main class="content">
+            {% block content %}{% endblock %}  <!-- Bloque para el contenido específico de cada página -->
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* Definición de variables CSS para colores y estilos reutilizables */
+:root {
+    --primary-color: #2c3e50;  /* Color primario (azul oscuro) */
+    --secondary-color: #34495e;  /* Color secundario (azul más claro) */
+    --accent-color: #3498db;  /* Color de acento (azul brillante) */
+    --text-color: #333;  /* Color de texto principal */
+    --background-color: #f5f6fa;  /* Color de fondo de la página */
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;  /* Fuente predeterminada */
+    background-color: var(--background-color);  /* Fondo de la página */
+    color: var(--text-color);  /* Color de texto */
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: var(--primary-color);  /* Fondo del encabezado */
+    color: white;  /* Color de texto del encabezado */
+    padding: 1rem;  /* Espaciado interno */
+    display: flex;
+    justify-content: space-between;  /* Alineación horizontal */
+    align-items: center;  /* Alineación vertical */
+}
+
+/* Estilos para la barra de navegación */
+.navigation {
+    background-color: var(--secondary-color);  /* Fondo de la navegación */
+    padding: 0.5rem;  /* Espaciado interno */
+}
+
+.navigation ul {
+    list-style: none;  /* Elimina los estilos de lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;  /* Espacio entre elementos de la lista */
+}
+
+.navigation a {
+    color: white;  /* Color de los enlaces */
+    text-decoration: none;  /* Sin subrayado */
+}
+
+/* Estilos para el contenedor principal */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 120px);  /* Altura mínima para cubrir la pantalla */
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    width: 250px;  /* Ancho fijo */
+    background-color: white;  /* Fondo blanco */
+    padding: 1rem;  /* Espaciado interno */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);  /* Sombra lateral */
+}
+
+/* Estilos para el contenido principal */
+.content {
+    flex: 1;  /* Ocupa el espacio restante */
+    padding: 2rem;  /* Espaciado interno */
+}
+
+/* Estilos para los widgets */
+.widgets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Diseño de cuadrícula flexible */
+    gap: 1rem;  /* Espacio entre widgets */
+    margin-top: 1rem;  /* Margen superior */
+}
+
+.widget {
+    background-color: white;  /* Fondo blanco */
+    padding: 1rem;  /* Espaciado interno */
+    border-radius: 4px;  /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Sombra suave */
+}
+
+/* Estilos para la información del usuario */
+.user-info {
+    display: flex;
+    align-items: center;  /* Alineación vertical */
+    gap: 1rem;  /* Espacio entre elementos */
+}
+
+.notification-badge {
+    background-color: var(--accent-color);  /* Fondo del badge */
+    color: white;  /* Color del texto */
+    padding: 0.2rem 0.6rem;  /* Espaciado interno */
+    border-radius: 50%;  /* Forma circular */
+    font-size: 0.8rem;  /* Tamaño de fuente */
+}
+
+/* Estilos para el pie de página */
+.site-footer {
+    background-color: var(--primary-color);  /* Fondo del pie de página */
+    color: white;  /* Color del texto */
+    padding: 40px 0 20px;  /* Espaciado interno */
+    margin-top: 40px;  /* Margen superior */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Tres columnas */
+    gap: 30px;  /* Espacio entre columnas */
+    max-width: 1200px;  /* Ancho máximo */
+    margin: 0 auto;  /* Centrado horizontal */
+    padding: 0 20px;  /* Espaciado interno */
+}
+
+.footer-section h3 {
+    color: var(--accent-color);  /* Color del título */
+    margin-bottom: 20px;  /* Margen inferior */
+    font-size: 1.2em;  /* Tamaño de fuente */
+}
+
+.footer-section ul {
+    list-style: none;  /* Elimina los estilos de lista */
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;  /* Margen inferior entre elementos */
+}
+
+.footer-section a {
+    color: white;  /* Color de los enlaces */
+    text-decoration: none;  /* Sin subrayado */
+    transition: color 0.3s ease;  /* Transición suave */
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);  /* Cambio de color al pasar el mouse */
+}
+
+.footer-bottom {
+    text-align: center;  /* Texto centrado */
+    margin-top: 30px;  /* Margen superior */
+    padding-top: 20px;  /* Espaciado interno superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);  /* Borde superior */
+}
+
+/* Estilos responsivos para el pie de página */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;  /* Una columna en dispositivos pequeños */
+        gap: 20px;  /* Espacio entre elementos */
+    }
+
+    .footer-section {
+        text-align: center;  /* Texto centrado */
+    }
+}
+
+/* Estilos mejorados para la barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    min-height: 100%;  /* Altura completa */
+}
+
+.sidebar h3 {
+    color: var(--primary-color);  /* Color del título */
+    margin-bottom: 1.5rem;  /* Margen inferior */
+    padding-bottom: 0.5rem;  /* Espaciado inferior */
+    border-bottom: 2px solid var(--accent-color);  /* Borde inferior */
+}
+
+.sidebar-menu {
+    list-style: none;  /* Elimina los estilos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;  /* Alineación vertical */
+    padding: 0.75rem 1rem;  /* Espaciado interno */
+    color: var(--text-color);  /* Color del texto */
+    text-decoration: none;  /* Sin subrayado */
+    border-radius: 4px;  /* Bordes redondeados */
+    transition: all 0.3s ease;  /* Transición suave */
+    margin-bottom: 0.5rem;  /* Margen inferior */
+}
+
+.sidebar-link:hover {
+    background-color: var(--background-color);  /* Cambio de fondo al pasar el mouse */
+    color: var(--accent-color);  /* Cambio de color al pasar el mouse */
+    transform: translateX(5px);  /* Desplazamiento horizontal */
+}
+
+.sidebar-icon {
+    margin-right: 0.75rem;  /* Margen derecho */
+    font-size: 1.2rem;  /* Tamaño de fuente */
+    width: 24px;  /* Ancho fijo */
+    text-align: center;  /* Texto centrado */
+}
+
+/* Estilos para el enlace activo en la barra lateral */
+.sidebar-link.active {
+    background-color: var(--accent-color);  /* Fondo del enlace activo */
+    color: white;  /* Color del texto */
+}
+
+/* Ajustes para el contenedor principal con barra lateral fija */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    background-color: var(--background-color);  /* Fondo del contenido */
+}
