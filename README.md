@@ -88,8 +88,9 @@ El sistema implementa rutas protegidas que:
 ### Diagrama de Clases UML
 El diagrama de clases muestra la estructura principal del sistema, incluyendo:
 - Clase Flask Principal (App)
-- Controladores de Rutas
-- Componentes de Vista
+- UserManager
+- ViewComponents
+- PageViews
 - Relaciones entre componentes
 
 - ![Clase UML](https://github.com/user-attachments/assets/78672c93-0a66-4649-b383-8f8246d18406)
